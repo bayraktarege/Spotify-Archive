@@ -67,7 +67,7 @@ os.chdir("Playlists")
 playlists = sp.user_playlists(USER_ID)
 
 for i, playlist in enumerate(playlists['items']): 
-    tracks = get_playlist_tracks("11131207810", playlist['id']) 
+    tracks = get_playlist_tracks(USER_ID, playlist['id']) 
     try:
         with open(playlist['name']+".txt", mode="w") as file:
             for index, track in enumerate(tracks):
