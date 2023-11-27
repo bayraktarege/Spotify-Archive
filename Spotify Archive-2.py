@@ -40,7 +40,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
 
 
 with open("saved_tracks.txt", mode="a+") as file:
-    for i in range(0, 587):
+    for i in range(0, 587): # you may want to change 587 here, this is for the count of tracks you saved in your saved tracks.
 
         result = sp.current_user_saved_tracks(limit=1, offset=i)
         track = result['items'][0]['track']
